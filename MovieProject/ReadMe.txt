@@ -13,7 +13,12 @@ Steps: How to host and run the solution?
 - copy the url which is shown on the command line
 - use that URl to make request form the browser.
 
-
+**Note******************
+Please follow below sequence command, if on chrome data is not visible because of trust certificate issue:
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+dotnet run
+**********************************
 E.g Below are the logs which you can refer for running dotnet run command and picking up the url to check
 the applicaiton in the browser   open your browser on http://localhost:62201/ **
 
