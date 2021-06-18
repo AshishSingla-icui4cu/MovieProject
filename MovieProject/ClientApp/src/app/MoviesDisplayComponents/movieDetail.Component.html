@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="form-group col-md-4">
+      <img class="form-group col-md-12" [src]="selectedMovie?.Poster" />
+    </div>
+    <div class="col-md-8">
+      <h4>
+        <em class="form-group col-md-12">{{selectedMovie?.Title}}</em>
+      </h4>
+      <h5>
+        <em class="form-group col-md-12">{{selectedMovie?.Plot}}</em>
+        <em class="form-group col-md-12">Language: {{selectedMovie?.Language}}</em>
+        <em class="form-group col-md-12">Location: {{selectedMovie?.Location}}</em>
+        <em class="form-group col-md-12">ImdbRating: {{selectedMovie?.imdbRating}}</em>
+        <em class="form-group col-md-12">Sound Effects: <ul *ngFor="let sound of selectedMovie.SoundEffects"><li class="form-group">{{sound}}</li></ul></em>
+      </h5>
+      <img *ngFor="let still of selectedMovie.Stills" class="form-group col-md-2" [src]="still" />
+    </div>
+</div>
+
+
+

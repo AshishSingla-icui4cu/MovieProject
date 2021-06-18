@@ -1,0 +1,26 @@
+<div [formGroup]="filterForm" class="row">
+  <div class="col-md-6">
+    <label>Search movies by title</label>
+    <input class="form-group col-md-12" placeholder="Search movies by title" type="text" formControlName="byTitle"/>
+  </div>
+
+  <div class="col-md-3">
+    <label>Language</label><select class="form-group col-md-12" formControlName="byLanguage">
+    <option value="">--Select--</option>
+      <option *ngFor="let language of languages;" [value]="language">{{language}}</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label>Location</label><select class="form-group col-md-12" formControlName="byLocation">
+  <option value="">--Select--</option>
+  <option *ngFor="let location of locations;" [value]="location">{{location}}</option>
+</select>
+  </div>
+</div>
+
+<div class="row" *ngFor="let movie of movies">
+    <movie-item [movie]="movie"></movie-item>
+</div>
+
+
+
